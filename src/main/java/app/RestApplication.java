@@ -5,6 +5,8 @@ import io.undertow.Undertow;
 import org.jboss.resteasy.plugins.server.undertow.UndertowJaxrsServer;
 import web.rest.DepartmentResource;
 import web.rest.EmployeeResource;
+import web.rest.FunctionResource;
+import web.rest.ProjectResource;
 import web.rest.SwaggerResource;
 
 import javax.ws.rs.core.Application;
@@ -36,6 +38,8 @@ public class RestApplication extends Application {
         // REST endpoints
         resources.add(DepartmentResource.class);
         resources.add(EmployeeResource.class);
+        resources.add(FunctionResource.class);
+        resources.add(ProjectResource.class);
 
         // SWAGGER endpoints
         resources.add(io.swagger.jaxrs.listing.ApiListingResource.class);
